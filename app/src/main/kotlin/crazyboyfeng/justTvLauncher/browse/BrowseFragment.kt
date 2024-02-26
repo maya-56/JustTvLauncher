@@ -1,5 +1,6 @@
 package crazyboyfeng.justTvLauncher.browse
 
+import android.R
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -8,9 +9,11 @@ import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
 import androidx.leanback.app.BrowseSupportFragment
 import androidx.leanback.widget.ListRowPresenter
 import androidx.lifecycle.ViewModelProvider
+import crazyboyfeng.justTvLauncher.LauncherActivity
 import crazyboyfeng.justTvLauncher.model.Shortcut
 import java.text.DateFormat
 import java.util.*
@@ -41,7 +44,7 @@ class BrowseFragment : BrowseSupportFragment() {
     }
 
     private fun setTick() = handler.post {
-        title = dateFormat.format(Date())
+        title = LauncherActivity.screenID;
     }
 
     private fun launch(packageName: String) {

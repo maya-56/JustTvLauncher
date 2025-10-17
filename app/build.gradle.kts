@@ -9,11 +9,12 @@ android {
      * compileSdk doesn't make sense,
      * just generally be consistent with targetSdk.
      */
-    compileSdk = 32
+    compileSdk = 34
+    namespace = "crazyboyfeng.justTvLauncher"
     defaultConfig {
         applicationId = "crazyboyfeng.justTvLauncher"
         minSdk = 17
-        targetSdk = 32
+        targetSdk = 34
         versionCode = 20240219
         versionName = "2024.2.19"
 //        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
@@ -32,6 +33,10 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 
